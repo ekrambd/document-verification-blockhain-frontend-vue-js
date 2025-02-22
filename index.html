@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  
+    <title>Document Verification</title>
+
+    <script>
+      const isAdmin = window.location.pathname.includes('admin');
+      if(isAdmin){
+        document.write(`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">`);
+        document.write(`<link rel="stylesheet" href="/back/vendor/fontawesome-free/css/all.min.css"/>`);
+        document.write(`<link rel="stylesheet" href="/back/vendor/bootstrap/css/bootstrap.min.css"/>`);
+        document.write(`<link rel="stylesheet" href="/back/css/ruang-admin.min.css"/>`);
+      }else{
+        document.write(`<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">`);
+        document.write(`<link rel="stylesheet" href="/custom/style.css" />`);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      if (isAdmin) {
+        document.write(`<script src="/back/vendor/jquery/jquery.min.js"><\/script>`);
+        document.write(`<script src="/back/vendor/bootstrap/js/bootstrap.bundle.min.js"><\/script>`);
+        document.write(`<script src="/back/plugins/bootstrap/js/bootstrap.bundle.min.js"><\/script>`);
+        document.write(`<script src="/back/vendor/jquery-easing/jquery.easing.min.js"><\/script>`);    
+        document.write(`<script src="/back/js/ruang-admin.min.js"><\/script>`);            
+      }else{
+        document.write(`<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><\/script>`);
+        document.write(`<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"><\/script>`);
+
+      }
+    </script>
+  </body>
+</html>
