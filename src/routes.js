@@ -10,6 +10,7 @@ import AdminDashboard from './components/admin/AdminDashboard.vue';
 
 import AddDocument from './components/admin/pages/documents/create.vue';
 import AllDocuments from './components/admin/pages/documents/index.vue';
+import EditDocument from './components/admin/pages/documents/edit.vue';
 
 const routes = [
     {
@@ -56,6 +57,12 @@ const routes = [
             requiredAuth: true,
         } 
     },
+
+    {
+        path: '/admin/edit-document/:id',
+        name: 'EditDocument',
+        component: EditDocument
+    }
 ];
 
 const router = createRouter({
